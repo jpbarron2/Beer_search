@@ -1,0 +1,16 @@
+{
+  "name": "beer_app",
+  "version": "1.0.0",
+  "description": "Beer/Brewery Search app served by BreweryDB API, Angular Front End",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Angular",
+    "Beer",
+    "API"
+  ],
+  "author": "Jason Barron",
+  "license": "ISC"
+}
