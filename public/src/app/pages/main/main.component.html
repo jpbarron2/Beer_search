@@ -1,0 +1,44 @@
+<div *ngIf="!randBrew" class="spinner-border text-secondary" role="status">
+  <span class="sr-only"></span>
+</div>
+<section *ngIf="randBrew" class="jumbotron text-center">
+  <div class="container">
+    <img [src]="randBrew['images']['large']" [alt]="randBrew['name']" />
+    <h1 class="jumbotron-heading">{{ randBrew["name"] }}</h1>
+    <div class="d-flex justify-content-center">
+      <p class="lead">
+        <!-- {{ randBrew["description"] }}<br /> -->
+        Established: {{ randBrew["established"] }}<br />
+
+        <span *ngIf="randBrew['isMassOwned'] == 'Y'">Mass Owned: Yes</span>
+        <span *ngIf="randBrew['isMassOwned'] == 'N'">Mass Owned: No</span><br />
+        <span *ngIf="randBrew['isInBusiness'] == 'Y'"
+          >Currently In Business</span
+        >
+        <span *ngIf="!randBrew['isInBusiness'] == 'Y'"
+          >Currently Not In Business</span
+        >
+        <br />
+      </p>
+    </div>
+  </div>
+</section>
+<div *ngIf="!randBeer">
+  <img src="../../../assets/loading.gif" alt="Loading..." />
+</div>
+
+<div *ngIf="randBeer">
+  {{ randBeer["nameDisplay"] }}<br />
+  {{ randBeer["style"]["name"] }}<br />
+  <!-- {{ randBeer["style"]["description"] }}<br /> -->
+  <h4 *ngIf="randBeer['ibu']">IBU: {{ randBeer["ibu"] }}</h4>
+  <h4 *ngIf="randBeer['abv']">ABV: {{ randBeer["abv"] }}</h4>
+  {{ randBeer["breweries"][0]["name"] }}<br />
+</div>
+
+<button *ngIf="randBrew" routerLink="/brewery/{{ randBrew['id'] }}">
+  See More from This Brewery
+</button>
+<button *ngIf="randBeer" routerLink="/beer/{{ randBeer['id'] }}">
+  See More about this Beer!
+</button>

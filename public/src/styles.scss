@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./sass/abstracts/variables";
+@import "./sass/abstracts/mixins";
+@import "./sass/base/typography";
+@import "./sass/layout/grid";
+//Global reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Setting Root font size for use of rem units */
+  /* By setting as a percent we allow users to adjust their font-size for better viewing, by setting it to  62.5% of default browser font size of 16, we get 10px allowing the rest of the page to use rem units in 10px increments. rem units do no apply on previous to IE9*/
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

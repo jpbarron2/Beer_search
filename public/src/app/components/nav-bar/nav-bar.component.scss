@@ -1,0 +1,13 @@
+@import "../../../sass/abstracts/variables";
+
+nav {
+  background-color: $color-primary-0;
+
+  font-size: 1.8rem;
+  a,
+  :active,
+  :visited {
+    text-decoration: none;
+    color: white;
+  }
+}

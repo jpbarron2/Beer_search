@@ -1,0 +1,14 @@
+<div *ngIf="beer">
+  {{ beer["name"] }}
+  {{ beer["abv"] }}
+  {{ beer["ibu"] }}
+  <hr />
+  {{ beer["style"]["name"] }}<br />
+  {{ beer["style"]["description"] }}
+  <hr />
+  {{ beer["style"]["ibuMin"] || "No Minimum" }} -
+  {{ beer["style"]["ibuMax"] || "No Max" }}
+  {{ beer["style"]["abvMin"] }} - {{ beer["style"]["abvMax"] }}
+  {{ beer["style"]["srmMin"] }} - {{ beer["style"]["srmMax"] }}
+  {{ beer["style"]["fgMin"] }} - {{ beer["style"]["fgMax"] }}
+</div>
